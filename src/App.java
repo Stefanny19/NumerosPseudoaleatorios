@@ -4,30 +4,27 @@ public class App {
     public static void main(String[] args) throws Exception {
 
         Scanner leer = new Scanner(System.in);
-        int xn, a, b, mod, iteracion;
+        double xn;
+        double a = 1 + (4*(3));
+        double b = 17; 
+        double mod = Math.pow(2, 32); //siendo 17 primo relativo a este número
+        int iteracion;
 
 
         System.out.println("Ingrese el valor de la semilla: ");
         xn = leer.nextInt();
-
-        System.out.println("Ingrese el valor de la constante multiplicativa: ");
-        a = leer.nextInt();
-
-        System.out.println("Ingresa el valor de la constante aditiva: ");
-        b = leer.nextInt();
         
-        System.out.println("Ingrese el valor del módulo: ");
-        mod = leer.nextInt();
-
         System.out.println("¿Cuántos números pseudoaleatorios desea generar?: ");
         iteracion = leer.nextInt();
 
         System.out.println("\nSecuencia:\n ");
         for (int i = 0; i < iteracion; i++) {
 
-            System.out.print(xn + " ");
+            System.out.println(xn + " ");
             xn = (a*xn + b) % mod;       
         }
+
+        //Realizar método para comprobar que c es primo relativo de m
               
     }
 
